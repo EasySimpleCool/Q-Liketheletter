@@ -11,10 +11,11 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: "Q blog - Really long description about random shiet in this page" },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:400,700' },
     ]
   },
 
@@ -40,7 +41,10 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    [
+      "storyblok-nuxt", 
+      {accessToken: '3AfMZFWRKdsSH8YeUQraxwtt', cacheProvider: 'memory'}
+    ]
   ],
   /*
   ** Axios module configuration
