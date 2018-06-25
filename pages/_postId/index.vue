@@ -1,8 +1,10 @@
 <template>
-    <div id="post">
+    <div id="post" v-editable="blok">
         <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
-        <h1>{{ title }}</h1>
-        <p>{{ content }}</p>
+        <section class="post-content">
+            <h1>{{ title }}</h1>
+            <p>{{ content }}</p>
+        </section>
     </div>
 </template>
 
@@ -14,12 +16,20 @@ export default {
                 version: "draft"
             })
             .then(res => {
+                console.log(res.data);
                 return {
+                    blok: res.data.story.content, 
                     image: res.data.story.content.thumbnail,
                     title: res.data.story.content.title,
                     content: res.data.story.content.content,
                 };
             });
+    },
+    mounted() {
+        this.$storyblok.init();
+        this.$storyblok.on("change", () => {
+            location.reload(true);
+        });
     }
 }
 </script>
@@ -30,5 +40,11 @@ export default {
     height: 300px;
     background-size: cover;
     background-position: center;
+}
+
+.post-content {
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
 }
 </style>
