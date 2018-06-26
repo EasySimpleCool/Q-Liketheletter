@@ -41,15 +41,14 @@ export default {
 
 <style scoped>
 #posts {
-  padding-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 15px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 240px;
+  text-align: center;
 }
-@media (min-width: 35rem) {
-  #posts {
-    flex-direction: row;
-  }
-}
+
 </style>

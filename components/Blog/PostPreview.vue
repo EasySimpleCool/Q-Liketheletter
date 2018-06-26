@@ -1,15 +1,12 @@
 <template>
-    <nuxt-link
-      :to="id">
-      <article class="post-preview">
-        <div
-          :style="{backgroundImage: 'url(' + thumbnailImage + ')'}"
-          class="post-preview-thumbnail"></div>
+    <nuxt-link class="post-preview-thumbnail" :style="{backgroundImage: 'url(' + thumbnailImage + ')'}"
+      :to="'/blog/' + id">
+      <div class="post-preview" >
           <div class="post-preview-content">
             <h1>{{ title }}</h1>
             <p>{{ excerpt }}</p>
           </div>
-      </article>
+      </div>
     </nuxt-link>
 </template>
 
@@ -42,26 +39,33 @@ a {
   text-decoration: none;
   color: black;
 }
+
 .post-preview {
-  border-radius: 3px;
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
-  width: 90%;
-  height: 20rem;
-  margin: 1rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
 }
+.post-preview:hover {
+  opacity: 1;
+}
+
 .post-preview-thumbnail {
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 10rem;
+  border-radius: 4px;
+  border: 8px solid white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
 }
 .post-preview-content {
-  text-align: center;
-  padding: 1rem;
+
 }
 @media (min-width: 35rem) {
   .post-preview {
-    width: 25rem;
   }
 }
 
