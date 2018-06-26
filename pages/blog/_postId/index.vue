@@ -37,14 +37,14 @@ export default {
 <style>
 .post-thumbnail {
     width: 100%;
-    height: 300px;
+    height: 500px;
     background-size: cover;
     background-position: center;
 }
 
 .post-content {
-    width: 80%;
-    max-width: 500px;
+    padding: 40px 0px;
+    max-width: 700px;
     margin: auto;
 }
 </style>
