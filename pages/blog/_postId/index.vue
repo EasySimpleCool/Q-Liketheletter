@@ -13,7 +13,7 @@ export default {
     asyncData(context) {
         return context.app.$storyapi
             .get("cdn/stories/blog/" + context.params.postId, {
-                version: "draft"
+                version: process.env.NODE_ENV == 'production' ? 'published' : "draft"
             })
             .then(res => {
                 console.log(res.data);
@@ -43,8 +43,14 @@ export default {
 }
 
 .post-content {
-    padding: 40px 0px;
-    max-width: 700px;
+    padding: 40px 15px;
     margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .post-content {
+    padding: 40px 15px;
+    max-width: 700px;
+    }
 }
 </style>
