@@ -55,6 +55,6 @@
     .nav-link a:hover,
     .nav-link a:active,
     .nav-link.nuxt-link-exact-active a {
-        color: #4A4A4A;
+        color: white;
     }
 </style>
