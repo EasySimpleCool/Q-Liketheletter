@@ -2,7 +2,7 @@
     <header class="main-header">
         <nav class="main-nav">
             <ul class="nav-links">
-                <nuxt-link to="/" tag="li" class="nav-link"><a>Posts</a></nuxt-link>
+                <nuxt-link to="/blog" tag="li" class="nav-link"><a>Posts</a></nuxt-link>
                 <nuxt-link to="/about" tag="li" class="nav-link"><a>About</a></nuxt-link>
             </ul>
         </nav>
@@ -43,7 +43,7 @@
     }
 
     .nav-link.nuxt-link-exact-active {
-        border-bottom: 3px solid chartreuse;
+        border-bottom: 3px solid #0BBACC;
     }
 
     .nav-link a {
@@ -55,6 +55,6 @@
     .nav-link a:hover,
     .nav-link a:active,
     .nav-link.nuxt-link-exact-active a {
-        color: chartreuse;
+        color: #0BBACC;
     }
 </style>

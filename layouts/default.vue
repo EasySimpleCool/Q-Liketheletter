@@ -21,10 +21,12 @@ export default {
 <style>
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  background-color: #F5F5F5;
 }
 
 .main-content {
