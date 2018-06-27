@@ -1,4 +1,5 @@
-const pkg = require('./package')
+const pkg = require('./package');
+const axios = require('axios');
 
 module.exports = {
   mode: 'universal',
@@ -51,6 +52,25 @@ module.exports = {
         cacheProvider: 'memory'}
     ]
   ],
+
+  generate: {
+    routes: function() {
+      axios.get(
+        "https://api.storyblok.com/v1/cdn/stories?version=published&token=TKTwH8fTHU0TrPMWSkrQ4Att&starts_with=blog&cv=" + 
+        Math.floor(Date.now() / 1e3)
+      )
+      .then(res => {
+        const blogPosts = res.data.stories.map(bp => bp.full_slug);
+        return [
+          '/',
+          '/blog',
+          '/about',
+          ...blogPosts
+        ]
+      })
+    }
+  },
+
   /*
   ** Axios module configuration
   */
