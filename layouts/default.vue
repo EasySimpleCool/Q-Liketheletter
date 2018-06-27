@@ -30,6 +30,6 @@ body {
 }
 
 .main-content {
-  margin-top: 4.5rem;
+  margin-top: 5rem;
 }
 </style>

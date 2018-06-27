@@ -4,6 +4,7 @@
         <section class="post-content">
             <h1>{{ title }}</h1>
             <p>{{ content }}</p>
+            <div class="Prototype"><iframe width="442" height="935" :src="embed" frameborder="0" allowfullscreen></iframe></div>
         </section>
     </div>
 </template>
@@ -22,6 +23,7 @@ export default {
                     image: res.data.story.content.thumbnail,
                     title: res.data.story.content.title,
                     content: res.data.story.content.content,
+                    embed: res.data.story.content.embed
                 };
             });
     },
