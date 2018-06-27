@@ -2,8 +2,7 @@
     <header class="main-header">
         <nav class="main-nav">
             <ul class="nav-links">
-                <nuxt-link to="/blog" tag="li" class="nav-link"><a>Posts</a></nuxt-link>
-                <nuxt-link to="/about" tag="li" class="nav-link"><a>About</a></nuxt-link>
+                <nuxt-link to="/"><a><img src="~/static/q-logo.svg"></a></nuxt-link>
             </ul>
         </nav>
     </header>
@@ -15,7 +14,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background: #965CDA;
+        background: white;
         height: 5rem;
     }
 
@@ -49,7 +48,7 @@
     .nav-link a {
         display: block;
         text-decoration: none;
-        color: white;
+        color: #4A4A4A;
     }
 
     .nav-link a:hover,

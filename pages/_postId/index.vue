@@ -37,11 +37,21 @@ export default {
 </script>
 
 <style>
+#post {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    border: 8px solid white;
+    text-align: center;
+}
+
 .post-thumbnail {
     width: 100%;
     height: 500px;
     background-size: cover;
     background-position: center;
+    border-radius: 4px;
 }
 
 .post-content {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo" transform="translate(23.000000, 24.000000)">
+            <path d="M32,16 L32,30 C32,31.1045695 31.1045695,32 30,32 L16,32 C7.163444,32 0,24.836556 0,16 C0,7.163444 7.163444,0 16,0 C24.836556,0 32,7.163444 32,16 Z M24,16 C24,11.581722 20.418278,8 16,8 C11.581722,8 8,11.581722 8,16 C8,20.418278 11.581722,24 16,24 L16,18 C16,16.8954305 16.8954305,16 18,16 L24,16 Z" fill="#4A4A4A"></path>
+            <circle id="logo-dot" fill="#00C1D5" cx="40" cy="28" r="4"></circle>
+        </g>
+    </g>
+</svg>

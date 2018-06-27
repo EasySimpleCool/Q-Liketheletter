@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import PostPreview from "@/components/Blog/PostPreview.vue";
+import PostPreview from "@/components/PostPreview.vue";
 
 export default {
   components: {

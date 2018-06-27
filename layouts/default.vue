@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheHeader />
+    <TheHeader/>
     <main class="main-content">
       <nuxt/>
     </main>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader/TheHeader'
+import TheHeader from '@/components/Header'
 
 export default {
   components: {
@@ -30,6 +30,7 @@ body {
 }
 
 .main-content {
-  margin-top: 5rem;
+  margin-top: 7.5rem;
 }
+
 </style>
