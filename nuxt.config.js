@@ -1,4 +1,4 @@
-const pkg = require('./package'),
+const pkg = require('./package');
 const axios = require('axios')
 
 module.exports = {
@@ -65,7 +65,7 @@ module.exports = {
           '/',
           ...blogPosts
         ]
-      }
+      });
     }
   },
   /*
