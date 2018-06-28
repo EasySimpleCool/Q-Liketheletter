@@ -43,7 +43,7 @@ export default {
 #posts {
   max-width: 700px;
   margin: 0 auto;
-  padding: 40px 15px;
+  padding: 0px 15px;
   display: grid;
   grid-gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

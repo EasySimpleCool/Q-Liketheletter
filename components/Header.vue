@@ -2,7 +2,7 @@
     <header class="main-header">
         <nav class="main-nav">
             <ul class="nav-links">
-                <nuxt-link to="/"><a><img src="~/static/q-logo.svg"></a></nuxt-link>
+                <nuxt-link to="./"><img src="~/static/q-logo.svg"></nuxt-link>
             </ul>
         </nav>
     </header>

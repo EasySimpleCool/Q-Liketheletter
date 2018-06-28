@@ -55,13 +55,13 @@ export default {
 }
 
 .post-content {
-    padding: 40px 15px;
+    padding: 0px 15px;
     margin: auto;
 }
 
 @media only screen and (min-width: 768px) {
     .post-content {
-    padding: 40px 15px;
+    padding: 0px 15px;
     max-width: 700px;
     }
 }
