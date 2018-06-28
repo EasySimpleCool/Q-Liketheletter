@@ -1,4 +1,5 @@
-const pkg = require('./package')
+const pkg = require('./package'),
+const axios = require('axios')
 
 module.exports = {
   mode: 'universal',
@@ -48,10 +49,25 @@ module.exports = {
           process.env.NODE_ENV == 'production'
             ? 'TKTwH8fTHU0TrPMWSkrQ4Att'
             : '3AfMZFWRKdsSH8YeUQraxwtt', 
-        cacheProvider: 'memory'}
+        cacheProvider: 'memory'
+      }
     ]
   ],
 
+  generate: {
+    routes: function() {
+      return axios.get(
+        'https://api.storyblok.com/v1/cdn/stories&published&token=TKTwH8fTHU0TrPMWSkrQ4Att&starts_with-blog&cv=' + Math.floor(Date.now() / 1e3)
+      )
+      .then(res => {
+        const blogPosts = res.data.stories.map(bp => bp.slug);
+        return [
+          '/',
+          ...blogPosts
+        ]
+      }
+    }
+  },
   /*
   ** Axios module configuration
   */
