@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheHeader/>
+    <Header/>
     <main class="main-content">
       <nuxt/>
     </main>
@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import TheHeader from '@/components/Header'
+import Header from '@/components/Header'
 
 export default {
   components: {
-    TheHeader
+    Header
   }  
 }
 </script>
