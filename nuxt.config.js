@@ -1,5 +1,5 @@
 const pkg = require('./package');
-const axios = require('axios')
+const axios = require('axios');
 
 module.exports = {
   mode: 'universal',
@@ -57,7 +57,7 @@ module.exports = {
   generate: {
     routes: function() {
       return axios.get(
-        'https://api.storyblok.com/v1/cdn/stories&published&token=TKTwH8fTHU0TrPMWSkrQ4Att&starts_with-blog&cv=' + Math.floor(Date.now() / 1e3)
+        'https://api.storyblok.com/v1/cdn/stories?version=published&token=TKTwH8fTHU0TrPMWSkrQ4Att&starts_with-blog&cv=' + Math.floor(Date.now() / 1e3)
       )
       .then(res => {
         const blogPosts = res.data.stories.map(bp => bp.slug);
