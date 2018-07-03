@@ -1,26 +1,23 @@
 <template>
-    <header class="main-header">
-        <nav class="main-nav">
-            <ul class="nav-links">
-                <nuxt-link to="./"><img src="~/static/q-logo.svg"></nuxt-link>
+    <footer class="main-footer">
+        <nav class="main-footer">
+            <ul class="footer-links">
+                <nuxt-link to="./">Footer</nuxt-link>
             </ul>
         </nav>
-    </header>
+    </footer>
 </template>
 
 <style scoped>
-    .main-header {
-        position: fixed;
-        top: 0;
-        left: 0;
+    .main-footer {
         width: 100%;
         background: white;
-        height: 5rem;
+        height: 10rem;
     }
     .main-nav {
         height: 100%;
     }
-    .nav-links {
+    .footer-links {
         list-style: none;
         margin: 0;
         padding: 0;

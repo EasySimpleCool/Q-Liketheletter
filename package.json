@@ -16,6 +16,7 @@
     "@nuxtjs/axios": "^5.0.0",
     "npm": "^6.1.0",
     "nuxt": "^1.0.0",
+    "storyblok-js-client": "^1.0.7",
     "storyblok-nuxt": "0.0.3"
   },
   "devDependencies": {
