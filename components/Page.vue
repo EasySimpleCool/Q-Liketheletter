@@ -12,6 +12,8 @@ export default {
 
 <style scoped>
 .page {
+  display: grid;
+  grid-gap: 8px;
   background-color: #ffffff;
   border-radius: 8px;
   padding: 8px;

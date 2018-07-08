@@ -17,10 +17,9 @@ export default {
   margin: 0 auto;
 }
 
-
 iframe {
-  width: 100%;
-  height: 100%;
+  width: 329px;
+  height: 329px;
   border: none;
 }
 </style>
