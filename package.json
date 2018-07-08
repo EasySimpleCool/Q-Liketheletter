@@ -21,10 +21,11 @@
     "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
-    "cross-env": "^5.0.1",
     "babel-eslint": "^8.2.1",
+    "cross-env": "^5.0.1",
     "eslint": "^4.15.0",
     "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-vue": "^4.0.0",
+    "reframe.js": "^2.2.1"
   }
 }
