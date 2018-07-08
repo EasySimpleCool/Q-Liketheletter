@@ -14,12 +14,15 @@ export default {
 .postembed {
   height: 329px;
   width: 329px;
+  margin: 0 auto;
 }
 
 
 iframe {
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   border: none;
 }
 </style>
