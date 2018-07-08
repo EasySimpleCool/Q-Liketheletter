@@ -14,7 +14,6 @@ export default {
 .postembed {
   height: 329px;
   width: 329px;
-  margin: 0 auto;
 }
 
 
