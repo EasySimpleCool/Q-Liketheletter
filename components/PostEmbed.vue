@@ -18,10 +18,20 @@ export default {
 }
 
 iframe {
-  width: 329px;
-  height: 329px;
+  width: 100%;
+  height: 100%;
   border: none;
 }
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { .iframe {
+      width: 1/3;
+      height: 1/3;
+    } }
+
+
 </style>
 
 
