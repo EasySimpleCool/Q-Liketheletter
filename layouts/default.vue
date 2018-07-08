@@ -39,6 +39,7 @@ main {
   max-width: 700px;
 }
 
+
 body {
   background-color: #F7F7F7;
 }
