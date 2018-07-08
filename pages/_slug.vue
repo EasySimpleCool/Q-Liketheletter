@@ -33,12 +33,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-section {
-  background-color: #ffffff;
-  border-radius: 4px;
-  padding: 15px;
-}
-
-</style>

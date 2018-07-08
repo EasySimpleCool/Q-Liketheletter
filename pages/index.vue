@@ -7,7 +7,7 @@
 </template>
 
 <script>
-export default {
+export default {  
   data () {
     return {
       pages: []
@@ -35,7 +35,7 @@ export default {
   },
   head () {
     return {
-      title: 'Pages'
+      title: "Liketheletter" 
     }
   }
 }
@@ -49,11 +49,12 @@ export default {
     grid-auto-rows: 240px;
 }
 li {
+    border: 8px solid #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    background-color: #ffffff;
+    background-color: rgb(119, 206, 247);
     box-shadow: 0 1px 2px rgba(0,0,0,0.07);
 }
 a {

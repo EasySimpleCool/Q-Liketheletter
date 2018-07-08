@@ -9,3 +9,11 @@ export default {
   props: ['blok']
 }
 </script>
+
+<style scoped>
+.page {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 8px;
+}
+</style>

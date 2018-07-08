@@ -15,8 +15,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: "Q blog - Really long description about random shiet in this page" },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:400,700' },
+      { rel: 'icon', type: 'image/png', href: '/favicon2.png' }
     ]
   },
 
