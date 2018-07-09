@@ -16,6 +16,7 @@
         width: 100%;
         background: white;
         height: 5rem;
+        z-index: 99;
     }
     .main-nav {
         height: 100%;

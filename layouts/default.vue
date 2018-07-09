@@ -24,13 +24,27 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
-  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+h3 {
+  
 }
 
 main {
@@ -39,8 +53,7 @@ main {
   max-width: 700px;
 }
 
-
 body {
-  background-color: #F7F7F7;
+  background-color: #4A4A4A;
 }
 </style>

@@ -12,20 +12,21 @@ export default {
 
 <style>
 .postembed {
-  left: 0;
-  width: 100%;
-  height: 0;
   position: relative;
+  overflow: hidden; 
+  z-index: 0;
+  max-width: 100%;
+  height: 0%;
   padding-bottom: 100%;
 }
 
 iframe {
   border: 0;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
 }
 
 /* @media only screen 

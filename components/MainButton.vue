@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="cta">
+  <div v-editable="blok" class="mainbutton">
     <a :href="blok.link">{{ blok.label }}</a>
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped>
-.cta {
+.mainbutton {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,5 +19,10 @@ export default {
   background: #0BBACC;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20);
   border-radius: 4px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
 }
 </style>
