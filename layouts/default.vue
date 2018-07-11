@@ -33,13 +33,14 @@ html {
   word-spacing: 1px;
 }
 
-p, h1, h2 {
+h1, h2 {
   color: #4A4A4A;
 }
 
 p {
   line-height: 1.5rem;
   margin-bottom: 1.5rem;
+  color: #808080;
 }
 
 h1 {

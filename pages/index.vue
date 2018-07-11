@@ -1,13 +1,23 @@
 <template>
-  <section class="container">
+  <div>
+    <div class="title"><h1><strong>Hey</strong> my name’s <strong>Q</strong>. <strong>Interaction Designer</strong> based in <strong>Melbourne</strong>.</h1></div>
+    <section class="post-grid">    
       <li v-for="(page, index) in pages" :key="index" class="page">
         <nuxt-link :to="page.slug">{{ page.name }}</nuxt-link>
       </li>
   </section>
+  </div>
 </template>
 
 <script>
-export default {  
+export default {
+  head () {
+    return {
+      link: [
+        { rel: 'stylesheet', href: "https://use.fontawesome.com/releases/v5.1.0/css/all.css" }
+      ]
+    } 
+  },
   data () {
     return {
       pages: []
@@ -42,7 +52,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.post-grid {
     display: grid;
     grid-gap: 16px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
