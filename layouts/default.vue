@@ -33,18 +33,31 @@ html {
   word-spacing: 1px;
 }
 
+p, h1, h2 {
+  color: #4A4A4A;
+}
+
+p {
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 h1 {
   font-size: 3rem;
   font-weight: 900;
+  margin-bottom: 2rem;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 900;
+  margin-bottom: .5rem;
 }
 
 h3 {
-  
+  font-size: .8rem;
+  margin-bottom: .3rem;
+  color: #0BBACC;
 }
 
 main {
@@ -54,6 +67,6 @@ main {
 }
 
 body {
-  background-color: #4A4A4A;
+  background-color: #F2F2F2;
 }
 </style>

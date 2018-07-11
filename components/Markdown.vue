@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok" class="markdown">
-    <vue-markdown> {{blok.content}} </vue-markdown>
+    <vue-markdown class="container"> {{blok.content}} </vue-markdown>
   </div>
 </template>
 
@@ -13,3 +13,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.markdown {
+}
+
+.container {
+  padding: 8px;
+  max-width: 456px;
+  margin: 0 auto;
+}
+
+</style>
