@@ -1,6 +1,10 @@
 <template>
   <div>
-    <div class="title"><h1><span class="intro">Hey</span> my name’s <span class="intro">Q</span>. <span class="intro">Interaction Designer</span> based in <span class="intro">Melbourne</span>.</h1></div>
+    <div class="title-container">
+        <div>
+          <span class="intro">Hey</span> my name’s <span class="intro">Q</span>. <span class="intro">Interaction Designer</span> based in <span class="intro">Melbourne</span>.
+        </div>
+    </div>
     <section class="post-grid">
         <nuxt-link :to="page.slug" v-for="(page, index) in pages" :key="index" class="page">{{ page.name }}</nuxt-link>
   </section>
@@ -51,9 +55,12 @@ export default {
 </script>
 
 <style scoped>
-.title {
+.title-container {
   display: flex;
+  font-size: 48px;
+  color: #4A4A4A;
   height: 300px;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
