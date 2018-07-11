@@ -40,12 +40,13 @@ h1, h2 {
 p {
   line-height: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #808080;
+  font-weight: 400;
+  color: #9B9B9B;
 }
 
 h1 {
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 800;
   margin-bottom: 2rem;
 }
 
@@ -57,6 +58,8 @@ h2 {
 
 h3 {
   font-size: .8rem;
+  font-weight: 100;
+  letter-spacing: 1px;
   margin-bottom: .3rem;
   color: #0BBACC;
 }

@@ -17,7 +17,7 @@ export default {
     return {
       link: [
         { rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.1.0/css/all.css" },
-        { rel: "stylesheet", href:"https://fonts.googleapis.com/css?family=Open+Sans:400,700,800"}
+        { rel: "stylesheet", href:"https://fonts.googleapis.com/css?family=Open+Sans:100,400,700,800"}
       ]
     } 
   },
@@ -78,23 +78,24 @@ export default {
 }
 
 .post-grid {
-    display: grid;
-    grid-gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 320px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 320px;
 }
 a {
-    border: 8px solid #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    background-color: rgb(119, 206, 247);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border: 8px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: #FFC176;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 a {
-    color: #4A4A4A;
-    text-decoration: #ffffff;
+
+  color: #ffffff;
+  text-decoration: #ffffff;
 }
 
 .pages
