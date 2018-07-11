@@ -16,7 +16,8 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon2.png' },
-      { rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.1.0/css/all.css"}
+      { rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.1.0/css/all.css"},
+      {rel: "stylesheet", href:"https://fonts.googleapis.com/css?family=Open+Sans:400,700,800"}
     ]
   },
 

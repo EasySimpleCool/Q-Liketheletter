@@ -45,13 +45,13 @@ p {
 
 h1 {
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 400;
   margin-bottom: 2rem;
 }
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: .5rem;
 }
 

@@ -15,9 +15,6 @@ export default {
 </script>
 
 <style scoped>
-.markdown {
-}
-
 .container {
   padding: 8px;
   max-width: 456px;

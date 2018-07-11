@@ -1,10 +1,8 @@
 <template>
   <div>
-    <div class="title"><h1><strong>Hey</strong> my name’s <strong>Q</strong>. <strong>Interaction Designer</strong> based in <strong>Melbourne</strong>.</h1></div>
-    <section class="post-grid">    
-      <li v-for="(page, index) in pages" :key="index" class="page">
-        <nuxt-link :to="page.slug">{{ page.name }}</nuxt-link>
-      </li>
+    <div class="title"><h1><span class="intro">Hey</span> my name’s <span class="intro">Q</span>. <span class="intro">Interaction Designer</span> based in <span class="intro">Melbourne</span>.</h1></div>
+    <section class="post-grid">
+        <nuxt-link :to="page.slug" v-for="(page, index) in pages" :key="index" class="page">{{ page.name }}</nuxt-link>
   </section>
   </div>
 </template>
@@ -14,7 +12,8 @@ export default {
   head () {
     return {
       link: [
-        { rel: 'stylesheet', href: "https://use.fontawesome.com/releases/v5.1.0/css/all.css" }
+        { rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.1.0/css/all.css" },
+        { rel: "stylesheet", href:"https://fonts.googleapis.com/css?family=Open+Sans:400,700,800"}
       ]
     } 
   },
@@ -52,20 +51,31 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  display: flex;
+  height: 300px;
+  align-items: center;
+  text-align: center;
+}
+
+.intro {
+  font-weight: 800;
+}
+
 .post-grid {
     display: grid;
     grid-gap: 16px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 240px;
+    grid-auto-rows: 320px;
 }
-li {
+a {
     border: 8px solid #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
     background-color: rgb(119, 206, 247);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 a {
     color: #4A4A4A;
