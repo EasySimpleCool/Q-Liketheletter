@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="grid">
     <div class="title-container">
-        <div>
+        <div class="intro-container">
           <span class="intro">Hey</span> my name’s <span class="intro">Q</span>. <span class="intro">Interaction Designer</span> based in <span class="intro">Melbourne</span>.
         </div>
     </div>
@@ -55,14 +55,22 @@ export default {
 </script>
 
 <style scoped>
+.grid {
+  display: grid;
+  grid-template-rows: 320px 1fr;
+}
+
 .title-container {
   display: flex;
-  font-size: 48px;
+  font-size: 32px;
   color: #4A4A4A;
-  height: 300px;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.intro-container {
+  max-width: 300px;
 }
 
 .intro {

@@ -30,7 +30,7 @@ export default {
 html {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  word-spacing: 1px;
+  word-spacing: .5px;
 }
 
 h1, h2 {
