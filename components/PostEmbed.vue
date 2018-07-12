@@ -9,7 +9,7 @@ export default {
   props: ['blok']
 };
   function myFunction() { var iframe = document.getElementById("frame");
-  var elmnt = iframe.contentWindow.document.getElementsByTagName("FramerContextRoot-Default")[0];
+  var elmnt = iframe.contentWindow.document.getElementsByTagName("div")[0];
   elmnt.style.width = "100%";}
 </script>
 
