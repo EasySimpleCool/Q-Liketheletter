@@ -1,13 +1,16 @@
 <template>
     <div v-editable="blok" class="postembed">
-      <iframe :src="blok.url" allowfullscreen></iframe>
+      <iframe id="frame" :src="blok.url" allowfullscreen></iframe>
     </div>
 </template>
 
 <script>
 export default {
   props: ['blok']
-}
+};
+  function myFunction() { var iframe = document.getElementById("frame");
+  var elmnt = iframe.contentWindow.document.getElementsByTagName("FramerContextRoot-Default")[0];
+  elmnt.style.width = "100%";}
 </script>
 
 <style>
