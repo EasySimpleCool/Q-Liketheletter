@@ -8,9 +8,9 @@
 export default {
   props: ['blok']
 };
-  function myFunction() { var iframe = document.getElementById("frame");
+  /* function myFunction() { var iframe = document.getElementById("frame");
   var elmnt = iframe.contentWindow.document.getElementsByTagName("div")[0];
-  elmnt.style.width = "100%";}
+  elmnt.style.width = "100%";} */
 </script>
 
 <style>
@@ -24,7 +24,6 @@ export default {
 }
 
 iframe {
-  align: middle;
   border: 0;
   position: absolute;
   top: 0;
@@ -33,16 +32,11 @@ iframe {
   height: 100%;
 }
 
-/* @media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) 
-    and (-webkit-device-pixel-ratio : 3) { 
-      iframe {
-        width: 1/3;
-        height: 1/3;
-      } 
-    } */
-
+@media only screen and (max-width: 768px) {
+  .postembed {
+    display: none;
+  }
+}
 
 </style>
 
