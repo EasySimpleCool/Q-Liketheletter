@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button v-on:click="counter += 1">Load Prototype</button>
+    <!-- <button v-on:click="counter += 1">Load Prototype</button> -->
     <div v-editable="blok" class="postembed">
       <iframe class="viewport" :src="blok.url" allowfullscreen></iframe>
     </div>
