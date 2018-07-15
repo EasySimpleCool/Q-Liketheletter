@@ -15,7 +15,6 @@ export default {
 
 <style>
 .postembed {
-  display: none;
   position: relative;
   overflow: hidden; 
   z-index: 0;
