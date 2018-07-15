@@ -1,6 +1,6 @@
 <template>
     <div v-editable="blok" class="postembed">
-      <iframe id="frame" :src="blok.url" allowfullscreen></iframe>
+      <iframe class="viewport" :src="blok.url" allowfullscreen></iframe>
     </div>
 </template>
 
@@ -32,11 +32,13 @@ iframe {
   height: 100%;
 }
 
-/* @media only screen and (max-width: 768px) {
-  .postembed {
-    display: none;
+
+
+@media only screen and (max-width: 768px) {
+  .viewport {
+    -webkit-min-device-pixel-ratio: 2;
   }
-} */
+}
 
 </style>
 
