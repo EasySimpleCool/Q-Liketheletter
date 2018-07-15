@@ -1,20 +1,21 @@
 <template>
+  <div>
+    <button v-on:click="counter += 1">Load Prototype</button>
     <div v-editable="blok" class="postembed">
       <iframe class="viewport" :src="blok.url" allowfullscreen></iframe>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
   props: ['blok']
-};
-  /* function myFunction() { var iframe = document.getElementById("frame");
-  var elmnt = iframe.contentWindow.document.getElementsByTagName("div")[0];
-  elmnt.style.width = "100%";} */
+}
 </script>
 
 <style>
 .postembed {
+  display: none;
   position: relative;
   overflow: hidden; 
   z-index: 0;
@@ -31,15 +32,6 @@ iframe {
   width: 100%;
   height: 100%;
 }
-
-
-
-@media only screen and (max-width: 768px) {
-  .viewport {
-    -webkit-min-device-pixel-ratio: 2;
-  }
-}
-
 </style>
 
 
