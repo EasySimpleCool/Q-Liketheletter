@@ -6,7 +6,13 @@
         </div>
     </div>
     <section class="post-grid">
-        <nuxt-link :to="page.slug" v-for="(page, index) in pages" :key="index" class="page">{{ page.name }}</nuxt-link>
+        <nuxt-link 
+          :to="page.slug" 
+          v-for="(page, index) in pages" 
+          :key="index" 
+          class="page">
+          {{ page.name }}
+        </nuxt-link>
   </section>
   </div>
 </template>
