@@ -7,10 +7,11 @@
     </div>
     <section class="post-grid">
         <nuxt-link 
+          v-for="(page, index) in pages"
           :to="page.slug" 
-          v-for="(page, index) in pages" 
           :key="index" 
-          class="page">
+          class="page"
+          :background-image="page.bg" >
           {{ page.name }}
         </nuxt-link>
   </section>
@@ -37,25 +38,27 @@ export default {
     let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
 
     // Load the JSON from the API
-    return context.app.$storyapi.get('cdn/links', {
+    return context.app.$storyapi.get('cdn/stories', {
       version: version
     }).then((result) => {
+      console.log(result);
+    // variable pages = empty string
       let pages = []
-      for (let id in result.data.links) {
-        if (result.data.links.hasOwnProperty(id)) {
-          let link = result.data.links[id]
-          pages.push({ slug: link.slug, name: link.name })
+    // for id in result data.links
+      for (let id in result.data.stories) {
+        // if id has unique name?
+        if (result.data.stories.hasOwnProperty(id)) {
+        // let link = unique name  
+          let story = result.data.stories[id]
+        // then push the values of slug and name to empty pages array
+          pages.push({ slug: story.slug, name: story.name, bg: story.content.body.postimage })
         }
       }
       return { pages: pages }
     }).catch((res) => {
       context.error({ statusCode: res.response.status, message: res.response.data })
     })
-  },
-  head () {
-    return {
-      title: "Liketheletter" 
-    }
+    console.log('hello')
   }
 }
 </script>
@@ -95,11 +98,7 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  background-color: #FFC176;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-a {
-
   color: #ffffff;
   text-decoration: #ffffff;
 }

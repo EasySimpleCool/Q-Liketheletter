@@ -15,7 +15,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: "Q blog - Really long description about random shiet in this page" },
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/favicon2.png' },
+      { rel: 'icon', type: 'image/png', href: '/Favicon.png' },
       { rel: "stylesheet", href: "https://use.fontawesome.com/releases/v5.1.0/css/all.css"},
       { rel: "stylesheet", href:"https://fonts.googleapis.com/css?family=Open+Sans:400,700,800"}
     ]
