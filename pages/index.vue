@@ -11,7 +11,7 @@
           :to="page.slug" 
           :key="index" 
           class="page"
-          :background-image="page.bg" >
+          :style="{backgroundImage: 'url(' + page.bg + ')'}">
           {{ page.name }}
         </nuxt-link>
   </section>
@@ -41,7 +41,6 @@ export default {
     return context.app.$storyapi.get('cdn/stories', {
       version: version
     }).then((result) => {
-      console.log(result);
     // variable pages = empty string
       let pages = []
     // for id in result data.links
@@ -51,9 +50,13 @@ export default {
         // let link = unique name  
           let story = result.data.stories[id]
         // then push the values of slug and name to empty pages array
-          pages.push({ slug: story.slug, name: story.name, bg: story.content.body.postimage })
+          pages.push({ slug: story.slug, name: story.name, bg: story.content.image })
+            debugger;        
         }
       }
+
+      
+
       return { pages: pages }
     }).catch((res) => {
       context.error({ statusCode: res.response.status, message: res.response.data })
