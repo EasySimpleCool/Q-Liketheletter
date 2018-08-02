@@ -104,7 +104,11 @@ a {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   color: #ffffff;
   text-decoration: #ffffff;
+  background-size: cover;
+  background-position: center;
 }
+
+
 
 .pages
 {
