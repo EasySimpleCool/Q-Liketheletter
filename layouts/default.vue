@@ -66,11 +66,11 @@ h3 {
 
 main {
   margin: 5rem auto 0;
-  padding: 15px;
+  padding: 15px 15px 40px 15px;
   max-width: 700px;
 }
 
 body {
-  background-color: #F2F2F2;
+  background-color: #F7F7F7;
 }
 </style>

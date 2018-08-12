@@ -6,20 +6,26 @@
         </div>
     </div>
     <section class="post-grid">
-        <nuxt-link 
+        <PostPreview 
           v-for="(page, index) in pages"
-          :to="page.slug" 
-          :key="index" 
-          class="page"
-          :style="{backgroundImage: 'url(' + page.bg + ')'}">
-          {{ page.name }}
-        </nuxt-link>
+          :key="index"
+          :slug="page.slug"
+          :thumbnailImage="page.background"
+          :tag="page.tag"
+          :name="page.name"
+          :description="page.description">
+        </PostPreview>
   </section>
   </div>
 </template>
 
 <script>
+import PostPreview from "@/components/PostPreview";
+
 export default {
+  components: {
+    PostPreview
+  },
   head () {
     return {
       link: [
@@ -50,8 +56,13 @@ export default {
         // let link = unique name  
           let story = result.data.stories[id]
         // then push the values of slug and name to empty pages array
-          pages.push({ slug: story.slug, name: story.name, bg: story.content.image })
-            debugger;        
+          pages.push({ 
+            slug: story.slug,
+            name: story.name,
+            background: story.content.image,
+            description: story.content.description,
+            // tag: story.tag_list
+          })       
         }
       }
 
@@ -61,7 +72,6 @@ export default {
     }).catch((res) => {
       context.error({ statusCode: res.response.status, message: res.response.data })
     })
-    console.log('hello')
   }
 }
 </script>
@@ -95,20 +105,48 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 320px;
 }
-a {
-  border: 8px solid #ffffff;
+/* a {
   display: flex;
+  padding-top: 40px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 15px;
+  border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  color: #ffffff;
   text-decoration: #ffffff;
   background-size: cover;
   background-position: center;
+  opacity: 0;
+  animation: GridAnimation 1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 
+a:hover h2 {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 16px;
+}
+
+a:hover p {
+  opacity: 1;
+  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1.0);
+}
+
+a:hover a {
+  color: rgba(100, 100, 100, 0.85);
+}
+
+h2 {
+  color: #ffffff;
+  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1.0);
+}
+
+p {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0;
+  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1.0);
+} */
 
 .pages
 {
@@ -116,4 +154,16 @@ a {
   margin: 0;
   padding: 0;
 }
+
+@keyframes GridAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 </style>
